@@ -5,6 +5,7 @@
 #### Visual Studio 2019
   - Swagger
   - Dependency Injection
+  - NLog for Logging
   - xUnit tests w/ Moq for Dependency Mocking
     - Execute: Any of the tests through VS Test Explorer
   
