@@ -22,3 +22,6 @@
     - Execute: ng test
   - Protractor for End-to-End Integration test.
     - Execute: ng e2e
+
+
+## P.S Looks better when viewed in mobile view (iPhone X Compatibility specifically!)
