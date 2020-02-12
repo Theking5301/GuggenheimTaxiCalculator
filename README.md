@@ -1,5 +1,8 @@
 # Guggenheim Metered Rate of Fare
 
+![PreviewScreenshot](https://i.imgur.com/SSCZJbB.png)
+
+
 ## Tech Stack:
 ### Backend: ASP.NET Core 2.1 (http://localhost:8080)
 #### Visual Studio 2019
