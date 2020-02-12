@@ -1,0 +1,65 @@
+<div class="main_container">
+    <div class="top_label">Taxi Calculator</div>
+    <div class="input_box">
+        <div class="input_label">Ride Date:</div>
+        <input name="ride_date_input" type="date" [ngClass]="{'invalid_input': !RideDateValid}" [(ngModel)]="RideDate" (change)="OnInputChanged()">
+    </div>
+    <div class="input_box">
+        <div class="input_label">Ride Start Time:</div>
+        <input name="ride_time_input" type="time" [ngClass]="{'invalid_input': !RideStartTimeValid}" [(ngModel)]="RideStartTime" (change)="OnInputChanged()">
+    </div>
+    <div class="input_box">
+        <div class="input_label">Miles Below 6 mph:</div>
+        <input name="miles_input" type="text" [ngClass]="{'invalid_input': !MilesBelowThresholdValid}" [(ngModel)]="MilesBelowThreshold" (change)="OnInputChanged()" placeholder="Miles">
+    </div>
+    <div class="input_box">
+        <div class="input_label">Minutes Over 6 mph or Stationary:</div>
+        <input name="minutes_input" type="text" [ngClass]="{'invalid_input': !MinutesAboveThresholdOrIdleValid}" [(ngModel)]="MinutesAboveThresholdOrIdle" (change)="OnInputChanged()" placeholder="Minutes">
+    </div>
+    <button name="submit_button" class="button" (click)="SubmitClicked($event)">Submit</button>
+
+    <table class="breakdown_table" [ngClass]="{'breakdown_table_visible': CostBreakdown }">
+        <div *ngIf="CostBreakdown">
+            <thead>
+                <th></th>
+                <th></th>
+                <th></th>
+            </thead>
+            <tr>
+                <td class="cost_category_label">Miles &lt; 6mph</td>
+                <td class="unit_cost_category_label">{{CostBreakdown.UnitCosts.UnitCost | currency:'USD' }} / Mile</td>
+                <td class="last_category_label">{{CostBreakdown.MilesUnderThreshold | currency:'USD' }}</td>
+            </tr>
+            <tr>
+                <td class="cost_category_label">Mins > 6mph or Idle</td>
+                <td class="unit_cost_category_label">{{CostBreakdown.UnitCosts.UnitCost | currency:'USD' }} / Min</td>
+                <td class="last_category_label">{{CostBreakdown.IdleOrOverThreshold | currency:'USD' }}</td>
+            </tr>
+            <tr>
+                <td class="cost_category_label">Base Cost</td>
+                <td class="unit_cost_category_label">{{CostBreakdown.UnitCosts.BaselineCost | currency:'USD' }} Flat</td>
+                <td class="last_category_label">{{CostBreakdown.BaselineCost | currency:'USD' }}</td>
+            </tr>
+            <tr>
+                <td class="cost_category_label">Peak Surcharge</td>
+                <td class="unit_cost_category_label">{{CostBreakdown.UnitCosts.PeakSurcharge | currency:'USD' }} M-F 4P-8P</td>
+                <td class="last_category_label">{{CostBreakdown.PeakSurcharge | currency:'USD' }}</td>
+            </tr>
+            <tr>
+                <td class="cost_category_label">Night Surcharge</td>
+                <td class="unit_cost_category_label">{{CostBreakdown.UnitCosts.NightSurcharge | currency:'USD' }} 8P-6A</td>
+                <td class="last_category_label">{{CostBreakdown.NightSurcharge | currency:'USD' }}</td>
+            </tr>
+            <tr>
+                <td class="cost_category_label">State Surcharge</td>
+                <td class="unit_cost_category_label">{{CostBreakdown.UnitCosts.StateSurcharges['NY'] | currency:'USD' }}</td>
+                <td class="last_category_label">{{CostBreakdown.StateSurcharges | currency:'USD' }}</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="total_cost_label">Total Cost</td>
+                <td name="total_cost_cell" class="total_cost_label">{{CostBreakdown.Total | currency:'USD'}}</td>
+            </tr>
+        </div>
+    </table>
+</div>

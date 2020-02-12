@@ -1,0 +1,139 @@
+.main_container {
+    position: absolute;
+    left    : calc(5%);
+    top     : 90px;
+
+    width : 90%;
+    height: 87%;
+
+    background-color: rgb(255, 255, 255);
+    border-radius   : 10px;
+    box-shadow      : 0px 0px 14px 0px rgba(0, 0, 0, 0.28);
+    animation       : 1s ease-in-out 0s 1 slide_up;
+}
+
+.top_label {
+    position: relative;
+    left    : calc(50% - 95px);
+
+    color      : rgb(85, 85, 85);
+    font-size  : 28px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    margin-top   : 20px;
+    margin-bottom: 20px;
+}
+
+.input_box {
+    position: relative;
+    left    : 7.5%;
+    width   : 85%
+}
+
+.input_label {
+    font-family: Arial, Helvetica, sans-serif;
+    color      : rgb(100, 100, 100);
+    font-weight: 100;
+    font-style : italic;
+}
+
+input[type=text],
+input[type=date],
+input[type=time],
+select {
+    position     : relative;
+    padding      : 12px 20px;
+    margin       : 8px 0;
+    width        : 100%;
+    display      : inline-block;
+    border       : 2px solid rgb(209, 209, 209);
+    box-shadow   : inset 0 1px 3px #ddd;
+    border-radius: 4px;
+    font-family  : Arial, Helvetica, sans-serif;
+    font-size    : 14px;
+    color        : rgb(60, 60, 60);
+    font-weight  : 600;
+    box-sizing   : border-box;
+    transition   : 100ms all;
+}
+
+.invalid_input {
+    border    : 2px solid rgb(211, 0, 0) !important;
+    box-shadow: 0px 0px 5px 0px rgba(211, 0, 0, 0.75) !important;
+}
+
+.button {
+    position        : relative;
+    left            : calc(50% - 100px);
+    width           : 200px;
+    background-color: rgb(81, 40, 79);
+    border          : 0px transparent;
+    border-radius   : 5px;
+    color           : white;
+    padding         : 15px 32px;
+    text-align      : center;
+    font-family     : Arial, Helvetica, sans-serif;
+    margin          : 4px 2px;
+    cursor          : pointer;
+    box-shadow      : 0px 0px 14px 0px rgba(0, 0, 0, 0.28);
+    margin-bottom   : 20px;
+}
+
+.breakdown_table {
+    position       : relative;
+    left           : 10px;
+    font-family    : Arial, Helvetica, sans-serif;
+    width          : calc(100% - 20px);
+    border-collapse: collapse;
+    opacity        : 0;
+    transition     : 500ms all;
+}
+
+.breakdown_table_visible {
+    opacity: 1;
+}
+
+.breakdown_table td {
+    border-bottom: 2px solid rgb(220, 220, 220);
+    padding      : 5px;
+}
+
+.breakdown_table tr:first-child td {
+    border-top: 0;
+}
+
+.breakdown_table tr:last-child td {
+    border-bottom: 0;
+}
+
+.cost_category_label {
+    font-weight: 600;
+    font-size  : 14px;
+    color      : rgb(80, 80, 80);
+}
+
+.unit_cost_category_label {
+    font-size: 14px;
+}
+
+.last_category_label {
+    font-size: 14px;
+}
+
+.total_cost_label {
+    font-weight: 600;
+    font-size  : 18px;
+    color      : rgb(50, 50, 50);
+}
+
+@keyframes slide_up {
+    0% {
+        transform: translateY(150%);
+        opacity  : 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity  : 1;
+    }
+}
