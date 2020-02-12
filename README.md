@@ -6,6 +6,7 @@
   - Swagger
   - Dependency Injection
   - xUnit tests w/ Dependency Mocking
+    - Execute: Any of the tests through VS Test Explorer
   
 ### Frontend: Angular 8.0.3 (http://localhost:4200)
 #### Visual Studio Code
@@ -17,4 +18,6 @@
   - Configuration
   - LESS Stylesheets
   - Jasmine for UI Unit Tests
+    - Execute: ng test
   - Protractor for End-to-End Integration test.
+    - Execute: ng e2e
