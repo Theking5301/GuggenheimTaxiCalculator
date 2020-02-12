@@ -1,5 +1,8 @@
 # Guggenheim Metered Rate of Fare
 
+![PreviewScreenshot](https://i.imgur.com/SSCZJbBl.png)
+
+
 ## Tech Stack:
 ### Backend: ASP.NET Core 2.1 (http://localhost:8080)
 #### Visual Studio 2019
@@ -22,3 +25,6 @@
     - Execute: ng test
   - Protractor for End-to-End Integration test.
     - Execute: ng e2e
+
+
+## P.S Looks better when viewed in mobile view (iPhone X Compatibility specifically!)
