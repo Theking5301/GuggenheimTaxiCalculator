@@ -1,7 +1,7 @@
 # Guggenheim Metered Rate of Fare
 
 ## Technologies Used:
-### Backend: ASP.NET Core 2.1 (http:localhost:8080)
+### Backend: ASP.NET Core 2.1 (http://localhost:8080)
 #### Visual Studio 2019
   - Swagger
   - Dependency Injection
