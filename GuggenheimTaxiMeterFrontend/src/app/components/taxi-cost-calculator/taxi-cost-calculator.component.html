@@ -27,7 +27,7 @@
             </thead>
             <tr>
                 <td class="cost_category_label">Miles &lt; 6mph</td>
-                <td class="unit_cost_category_label">{{CostBreakdown.UnitCosts.UnitCost | currency:'USD' }} / Mile</td>
+                <td class="unit_cost_category_label">{{CostBreakdown.UnitCosts.UnitCost * 5 | currency:'USD' }} / Mile</td>
                 <td class="last_category_label">{{CostBreakdown.MilesUnderThreshold | currency:'USD' }}</td>
             </tr>
             <tr>
