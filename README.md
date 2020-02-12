@@ -1,6 +1,6 @@
 # Guggenheim Metered Rate of Fare
 
-![PreviewScreenshot](https://i.imgur.com/SSCZJbB.png)
+![PreviewScreenshot](https://i.imgur.com/SSCZJbBl.png)
 
 
 ## Tech Stack:
