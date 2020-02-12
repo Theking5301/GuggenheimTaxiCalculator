@@ -5,7 +5,7 @@
 #### Visual Studio 2019
   - Swagger
   - Dependency Injection
-  - xUnit tests w/ Dependency Mocking
+  - xUnit tests w/ Moq for Dependency Mocking
     - Execute: Any of the tests through VS Test Explorer
   
 ### Frontend: Angular 8.0.3 (http://localhost:4200)
