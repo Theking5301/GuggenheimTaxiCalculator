@@ -13,6 +13,8 @@
   - Promises
   - Directives
   - Dependency Injection
+  - Routing
+  - Configuration
   - LESS Stylesheets
   - Jasmine for UI Unit Tests
   - Protractor for End-to-End Integration test.
