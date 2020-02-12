@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TaxiMeter } from 'src/models/TaxiMeter.model';
 import { DatePipe } from '@angular/common';
-import { TaxiCostCalculatorService } from 'src/app/services/taxi-cost-calculator.service';
+import { TaxiCostCalculatorService } from 'src/app/services/taxi-cost-calculator/taxi-cost-calculator.service';
 import { TaxiMeterCostBreakdown } from 'src/models/TaxiMeterCostBreakdown.model';
 
 @Component({

@@ -2,19 +2,19 @@
     <div class="top_label">Taxi Calculator</div>
     <div class="input_box">
         <div class="input_label">Ride Date:</div>
-        <input name="ride_date_input" type="date" [ngClass]="{'invalid_input': !RideDateValid}" [(ngModel)]="RideDate" (change)="OnInputChanged()">
+        <input name="ride_date_input" type="date" DateValidator [(ngModel)]="RideDate" (change)="OnInputChanged()">
     </div>
     <div class="input_box">
         <div class="input_label">Ride Start Time:</div>
-        <input name="ride_time_input" type="time" [ngClass]="{'invalid_input': !RideStartTimeValid}" [(ngModel)]="RideStartTime" (change)="OnInputChanged()">
+        <input name="ride_time_input" type="time" TimeValidator [(ngModel)]="RideStartTime" (change)="OnInputChanged()">
     </div>
     <div class="input_box">
         <div class="input_label">Miles Below 6 mph:</div>
-        <input name="miles_input" type="text" [ngClass]="{'invalid_input': !MilesBelowThresholdValid}" [(ngModel)]="MilesBelowThreshold" (change)="OnInputChanged()" placeholder="Miles">
+        <input name="miles_input" type="number" NumberValidator [MinimumNumber]="'0'" [(ngModel)]="MilesBelowThreshold" (change)="OnInputChanged()" placeholder="Miles">
     </div>
     <div class="input_box">
         <div class="input_label">Minutes Over 6 mph or Stationary:</div>
-        <input name="minutes_input" type="text" [ngClass]="{'invalid_input': !MinutesAboveThresholdOrIdleValid}" [(ngModel)]="MinutesAboveThresholdOrIdle" (change)="OnInputChanged()" placeholder="Minutes">
+        <input name="minutes_input" type="number" NumberValidator [MinimumNumber]="'0'" [(ngModel)]="MinutesAboveThresholdOrIdle" (change)="OnInputChanged()" placeholder="Minutes">
     </div>
     <button name="submit_button" class="button" (click)="SubmitClicked($event)">Submit</button>
 

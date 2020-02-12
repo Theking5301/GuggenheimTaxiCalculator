@@ -7,12 +7,18 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http'; 
 
 import { TaxiCostCalculatorComponent } from './components/taxi-cost-calculator/taxi-cost-calculator.component';
-import { TaxiCostCalculatorService } from './services/taxi-cost-calculator.service';
+import { TaxiCostCalculatorService } from './services/taxi-cost-calculator/taxi-cost-calculator.service';
+import { DateValidatorDirective } from './directives/date-validator/date-validator.directive';
+import { TimeValidatorDirective } from './directives/time-validator/time-validator.directive';
+import { NumberValidatorDirective } from './directives/number-validator/number-validator.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TaxiCostCalculatorComponent
+    TaxiCostCalculatorComponent,
+    DateValidatorDirective,
+    TimeValidatorDirective,
+    NumberValidatorDirective
   ],
   imports: [
     BrowserModule,

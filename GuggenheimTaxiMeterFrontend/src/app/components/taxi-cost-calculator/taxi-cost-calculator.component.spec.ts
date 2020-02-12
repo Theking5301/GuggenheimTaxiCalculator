@@ -4,7 +4,10 @@ import { TaxiCostCalculatorComponent } from './taxi-cost-calculator.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { DatePipe } from '@angular/common';
-import { TaxiCostCalculatorService } from 'src/app/services/taxi-cost-calculator.service';
+import { TaxiCostCalculatorService } from 'src/app/services/taxi-cost-calculator/taxi-cost-calculator.service';
+import { DateValidatorDirective } from 'src/app/directives/date-validator/date-validator.directive';
+import { TimeValidatorDirective } from 'src/app/directives/time-validator/time-validator.directive';
+import { NumberValidatorDirective } from 'src/app/directives/number-validator/number-validator.directive';
 
 describe('TaxiCostCalculatorComponent', () => {
 	let component: TaxiCostCalculatorComponent;
@@ -17,7 +20,10 @@ describe('TaxiCostCalculatorComponent', () => {
 				FormsModule
 			],
 			declarations: [
-				TaxiCostCalculatorComponent
+				TaxiCostCalculatorComponent,
+				DateValidatorDirective,
+				TimeValidatorDirective,
+				NumberValidatorDirective
 			],
 			providers: [
 				DatePipe,
