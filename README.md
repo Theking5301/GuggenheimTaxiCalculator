@@ -1,4 +1,4 @@
-# GuggenheimTaxiCalculator
+# Guggenheim Metered Rate of Fare
 
 ## Technologies Used:
 ### Backend: ASP.NET Core 2.1 (http:localhost:8080)
